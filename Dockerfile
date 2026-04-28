@@ -27,7 +27,7 @@ WORKDIR /src
 
 # Note: using the 'develop' branch as requested by your supervisor.
 # For long-term reproducibility, consider switching to a fixed release tag.
-RUN git clone --branch=develop --single-branch https://gitlab.com/QEF/q-e.git
+RUN git clone --depth=1 --branch=develop --single-branch https://gitlab.com/QEF/q-e.git
 
 WORKDIR /src/q-e/build
 

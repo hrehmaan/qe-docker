@@ -27,7 +27,7 @@ WORKDIR /src/q-e/build
 RUN ../configure && \
     make -j"$(nproc)" all
 
-ENV PATH="/src/q-e/bin:${PATH}"
+ENV PATH="/src/q-e/build/bin:${PATH}"
 
 WORKDIR /root/shared
 

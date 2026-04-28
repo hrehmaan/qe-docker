@@ -83,6 +83,44 @@ After the run finishes, check:
 ```bash
 grep "JOB DONE" espresso.out
 ```
+## Troubleshooting Docker build issues
+
+If the Docker build fails because of network, DNS, or registry connection problems, you can try configuring Docker's daemon settings.
+
+Create or edit Docker's `daemon.json` file and add:
+
+```json
+{
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "dns": ["8.8.8.8", "8.8.4.4"],
+  "registry-mirrors": ["https://mirror.gcr.io"]
+}
+```
+
+After saving the file, restart Docker and build again:
+
+```bash
+docker build --no-cache -t quantum-espresso .
+```
+
+On Linux, the file is usually located at:
+
+```text
+/etc/docker/daemon.json
+```
+
+On Docker Desktop, you can usually edit it from:
+
+```text
+Docker Desktop → Settings → Docker Engine
+```
+
+Then paste or modify the JSON configuration there and restart Docker.
 
 ## Notes
 

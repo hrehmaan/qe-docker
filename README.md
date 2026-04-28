@@ -72,8 +72,9 @@ This runs Quantum ESPRESSO and saves the output to `espresso.out` while also sho
 Alternatively, if using MPI:
 
 ```bash
-mpirun pw.x < espresso.pwi > espresso.out
+mpirun -np N pw.x < espresso.pwi > espresso.out
 ```
+N is the number of cores, eg: 2,3,4,5,...
 
 After the run finishes, check:
 

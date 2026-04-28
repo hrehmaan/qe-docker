@@ -23,6 +23,8 @@ docker build -t quantum-espresso .
 
 ```bash
 docker run -it -v $(pwd):/root/shared --rm -w /root/shared quantum-espresso
+OR
+docker run -it -v ${PWD}:/root/shared --rm -w /root/shared quantum-espresso
 ```
 
 ## Test Quantum ESPRESSO

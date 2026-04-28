@@ -6,14 +6,23 @@ Source repository: https://gitlab.com/QEF/q-e
 
 ## Build locally
 
+Clone this repository:
+
 ```bash
-docker build -t test_qef .
+git clone https://github.com/HREHMAAN/qe-docker.git
+cd qe-docker
+```
+
+Build the Docker image:
+
+```bash
+docker build -t quantum-espresso .
 ```
 
 ## Run the container
 
 ```bash
-docker run -it -v $(pwd):/root/shared --rm -w /root/shared test_qef
+docker run -it -v $(pwd):/root/shared --rm -w /root/shared quantum-espresso
 ```
 
 ## Test Quantum ESPRESSO
@@ -22,10 +31,19 @@ Inside the container, run:
 
 ```bash
 which pw.x
-pw.x -h
+pw.x
+```
+
+You should see Quantum ESPRESSO start and wait for input.
+
+To exit if it waits for input, press:
+
+```bash
+Ctrl+C
 ```
 
 ## Notes
 
 The image currently builds Quantum ESPRESSO from the `develop` branch.
-For better reproducibility, a fixed release tag is recommended for serious use.
+
+For reproducible research, using a fixed Quantum ESPRESSO release tag is recommended.

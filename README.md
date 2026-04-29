@@ -49,7 +49,7 @@ docker build -t quantum-espresso .
 ```bash
 docker run -it -v $(pwd):/root/shared --rm -w /root/shared quantum-espresso
 ```
-OR
+OR - in widows powershell
 ```
 docker run -it -v ${PWD}:/root/shared --rm -w /root/shared quantum-espresso
 ```
@@ -83,7 +83,7 @@ To run the demo, first start the Docker container:
 ```bash
 docker run -it -v $(pwd):/root/shared --rm -w /root/shared quantum-espresso
 ```
-OR
+OR - in widows powershell
 ```
 docker run -it -v ${PWD}:/root/shared --rm -w /root/shared quantum-espresso
 ```

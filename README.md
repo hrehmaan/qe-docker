@@ -4,6 +4,7 @@ This repository provides a Docker environment for building Quantum ESPRESSO from
 
 Source repository: https://gitlab.com/QEF/q-e
 
+ To generate the Quantum ESPRESSO pw.x input files use this app https://qe-input-pwi-generator.streamlit.app/
 ## Install Docker
 
 Docker is required to build and run this image.

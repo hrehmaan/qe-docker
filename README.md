@@ -24,7 +24,7 @@ After installation, open Docker Desktop and wait until Docker is running.
 After installing docker Clone this repository:
 
 ```bash
-git clone [https://github.com/HREHMAAN/qe-docker.git](https://github.com/hrehmaan/qe-docker.git)
+git clone https://github.com/hrehmaan/qe-docker.git
 ```
 Move to qe-docker folder
 ```
